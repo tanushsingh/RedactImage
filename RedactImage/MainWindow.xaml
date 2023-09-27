@@ -1,0 +1,31 @@
+﻿<Window x:Class="RedactImage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RedactImage"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        MouseLeftButtonUp="Window_MouseLeftButtonUp"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="349*" />
+            <ColumnDefinition Width="30*" />
+        </Grid.ColumnDefinitions>
+        <Image Margin="0,0,0,53" Name="imgPhoto"
+        Stretch="Fill" Grid.ColumnSpan="3" />
+        <Canvas Name ="shapeCanvas"
+                 Grid.ColumnSpan="3" Margin="0,0,0,53"
+         />
+        <Button Height="38" HorizontalAlignment="Left"
+        Margin="10,0,0,10" Name="btnLoad" VerticalAlignment="Bottom"
+        Width="145" Grid.Column="1" Click="btnLoad_Click">_Load Image</Button>
+        <Button Height="38" HorizontalAlignment="Left"
+        Margin="170,0,0,10" Name="btnClear" VerticalAlignment="Bottom"
+        Width="145" Grid.Column="1" Click="btnClear_Click">Clear</Button>
+
+    </Grid>
+</Window>
